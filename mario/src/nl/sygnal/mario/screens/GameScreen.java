@@ -4,31 +4,30 @@ import nl.sygnal.mario.Mario;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.GL10;
 
-public class SplashScreen implements Screen{
+public class GameScreen implements Screen {
+
 	//FIELDS
 	private Mario game;
 	
-	//CONSTRUCTOR
-	public SplashScreen(Mario game){
+	//CONSTRUCTORS
+	public GameScreen(Mario game){
 		this.game = game;
 	}
 	
 	//GETTERS
 	
+	
 	//SETTERS
+	
 	
 	//OVERRIDES
 	@Override
 	public void render(float delta) {
-		Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
+		Gdx.gl.glClearColor(0f, 1f, 0f, 1f);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
-		if(Gdx.input.isKeyPressed(Keys.SPACE)){
-			game.setScreen(game.getGameScreen());
-		}
 	}
 
 	@Override
@@ -66,5 +65,5 @@ public class SplashScreen implements Screen{
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 }
